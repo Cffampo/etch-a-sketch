@@ -6,7 +6,15 @@ for(let i = 0; i < 256; i++){
     newDiv.classList.add("newDiv");
 
     newDiv.addEventListener("mouseover", () =>{
-    newDiv.style.backgroundColor = "black";
+
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+
+        const randomColor = `rgb(${red}, ${green}, ${blue})`;
+
+
+        newDiv.style.backgroundColor = randomColor;
     });
 
     container.appendChild(newDiv);
@@ -39,7 +47,14 @@ btn.addEventListener("click", () =>{
         newDiv.style.width = squareSize + "px";
 
         newDiv.addEventListener("mouseover", () =>{
-        newDiv.style.backgroundColor = "black";
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+
+        const randomColor = `rgb(${red}, ${green}, ${blue})`;
+
+
+        newDiv.style.backgroundColor = randomColor;
         });
 
     container.appendChild(newDiv);
